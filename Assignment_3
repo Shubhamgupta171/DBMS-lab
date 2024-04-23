@@ -1,0 +1,45 @@
+CREATE TABLE EMP (
+    Emp_no INT,
+    Emp_name VARCHAR(255),
+    Department VARCHAR(55),
+    City VARCHAR(255),
+    Email_id VARCHAR(255)
+);
+
+
+
+INSERT INTO EMP (Emp_no, Emp_name, Department, City, Email_id)
+VALUES
+    (1, 'bob', 'D1', 'mumbai', 'bob@gmail.com'),
+    (2, 'Rahul', 'MECH', 'lucknow', 'Rahul@gmail.com'),
+    (12, 'ram', 'Sales', 'kolkata', 'ram12@gmail.com'),
+    (4, 'Shubham', 'D10', 'Guwahati', 'gupta@gmail.com'),
+    (5, 'anshu', 'D10', 'Tezpur', 'anshu@gmail.com');
+
+
+
+SELECT * FROM EMP;
+
+
+SELECT * FROM EMP WHERE Department = 'D10';
+
+
+UPDATE EMP SET City = 'Goa' WHERE Emp_no = 12;
+
+
+
+SELECT * FROM EMP WHERE Department = 'MECH';
+
+
+
+UPDATE EMP SET Email_id = NULL WHERE Emp_name = 'bob';
+
+
+UPDATE EMP SET Email_id = 'bob1@gmail.com' WHERE Emp_name = 'bob';
+
+
+
+SELECT * FROM EMP WHERE Department = 'SALES';
+
+
+TRUNCATE TABLE EMP;
